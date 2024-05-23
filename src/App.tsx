@@ -1,11 +1,9 @@
-import Search from "./components/Search";
-import Table from "./components/Table";
+import ProductsTable from "./components/ProductsTable";
 
 const App = () => {
   return (
     <div >
-      <Search />
-      <Table />
+      <ProductsTable />
     </div>
   );
 };

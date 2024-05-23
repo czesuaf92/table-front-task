@@ -1,0 +1,36 @@
+.products-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.category-header, .subcategory-header, .product-cell {
+  padding: 8px;
+  border: 1px solid #ddd;
+}
+
+.category-header {
+  height: 80px;
+  background-color: #f0f0f0;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.subcategory-header {
+  height: 60px;
+  background-color: #e0e0e0;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.product-row {
+  height: 40px;
+  background-color: #ffffff;
+  display: flex;
+}
+
+.product-cell {
+  flex: 1;
+}
