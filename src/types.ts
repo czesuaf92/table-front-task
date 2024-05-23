@@ -22,3 +22,8 @@ export interface SelectOptionType {
   label: string;
   value: string;
 }
+
+export interface AutoSizerSizeType {
+  height: number;
+  width: number;
+}

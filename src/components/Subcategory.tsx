@@ -39,7 +39,7 @@ const Subcategory = ({ subcategory }: SubcategoryProps) => {
         <span>
           {subcategory.name}
         </span>
-        <button onClick={handleSortClick}>{`Sort by: ${sortOption}`}</button>
+        <button onClick={handleSortClick}>{`Sort by price: ${sortOption}`}</button>
       </div>
       {sortedProducts.map(product => (
         <ProductRow key={product.index} product={product} />
