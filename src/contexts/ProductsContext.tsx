@@ -13,6 +13,7 @@ const ProductsContext = createContext<ProductsContextType | undefined>(undefined
 
 export const ProductsProvider: React.FC<{ children: ReactNode; }> = ({ children }) => {
   const [products, setProducts] = useState<CategoryType[]>(testData);
+  console.log("🚀 ~ products:", products);
   const [filterSearchTerm, setFilterSearchTerm] = useState<string>('');
 
   const filteredProducts = useMemo(() => {
@@ -26,7 +27,14 @@ export const ProductsProvider: React.FC<{ children: ReactNode; }> = ({ children 
   }, [filterSearchTerm, products]);
 
   return (
-    <ProductsContext.Provider value={{ products: filteredProducts, setProducts, filterSearchTerm, setFilterSearchTerm }}>
+    <ProductsContext.Provider
+      value={{
+        products: filteredProducts,
+        setProducts,
+        filterSearchTerm,
+        setFilterSearchTerm
+      }}
+    >
       {children}
     </ProductsContext.Provider>
   );

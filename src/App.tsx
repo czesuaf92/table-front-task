@@ -4,7 +4,7 @@ import { ProductsProvider } from "./contexts/ProductsContext";
 const App = () => {
   return (
     <ProductsProvider>
-      <div >
+      <div className="container">
         <ProductsTable />
       </div>
     </ProductsProvider>
