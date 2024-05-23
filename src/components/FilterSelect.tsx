@@ -5,13 +5,13 @@ interface FilterSelectProps {
   options: SelectOptionType[];
   placeholder: string;
   name: string;
+  onChangeCallback: React.Dispatch<React.SetStateAction<SelectOptionType[]>>;
 }
 
-const FilterSelect = ({ options, placeholder, name }: FilterSelectProps) => {
-  const handleChangeSelect = (selected: MultiValue<SelectOptionType>) => {
-    console.log(selected);
+const FilterSelect = ({ options, placeholder, name, onChangeCallback }: FilterSelectProps) => {
+  const handleChange = (selected: MultiValue<SelectOptionType>) => {
+    onChangeCallback(selected as SelectOptionType[]);
   };
-
   return (
     <Select
       options={options}
@@ -24,7 +24,7 @@ const FilterSelect = ({ options, placeholder, name }: FilterSelectProps) => {
       }}
       placeholder={placeholder}
       name={name}
-      onChange={handleChangeSelect}
+      onChange={handleChange}
     />
   );
 };
