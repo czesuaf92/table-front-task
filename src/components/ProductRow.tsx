@@ -9,8 +9,8 @@ const ProductRow = ({ product }: ProductRowProps) => {
     <div className="product-row">
       <div className="product-cell">{product.index}</div>
       <div className="product-cell">{product.name}</div>
-      <div className="product-cell">{product.price}</div>
       <div className="product-cell">{product.quantity}</div>
+      <div className="product-cell">{product.price}</div>
     </div>
   );
 };

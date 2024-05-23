@@ -15,3 +15,5 @@ export interface CategoryType {
   name: string;
   subcategories: SubCategoryType[];
 }
+
+export type SortOptionType = '-' | 'asc' | 'desc';

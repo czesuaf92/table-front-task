@@ -1,9 +1,10 @@
 import { useState } from "react";
 import { testData } from "../data/testData";
+import { CategoryType } from "../types";
 import Category from "./Category";
 
 const ProductsTable: React.FC = () => {
-  const [products, setProducts] = useState(testData);
+  const [products, setProducts] = useState<CategoryType[]>(testData);
 
   return (
     <div>
