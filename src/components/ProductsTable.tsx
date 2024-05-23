@@ -1,13 +1,28 @@
 import { useProducts } from "../contexts/ProductsContext";
 import Category from "./Category";
+import FilterSelect from "./FilterSelect";
 import SearchBar from "./SearchBar";
 
 const ProductsTable: React.FC = () => {
-  const { products } = useProducts();
+  const { products, setFilterCategory, categorySelectOptions, subcategorySelectOptions, setFilterSubcategory } = useProducts();
 
   return (
     <div>
-      <SearchBar />
+      <div className="searchbar-wrapper">
+        <SearchBar />
+        <FilterSelect
+          options={categorySelectOptions}
+          placeholder="Select category"
+          name="categories"
+          onChangeCallback={setFilterCategory}
+        />
+        <FilterSelect
+          options={subcategorySelectOptions}
+          placeholder="Select subcategory"
+          name="subcategories"
+          onChangeCallback={setFilterSubcategory}
+        />
+      </div>
       <div className="products-table">
         {
           products.map(category => (

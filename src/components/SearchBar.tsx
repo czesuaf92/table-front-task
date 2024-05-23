@@ -24,15 +24,13 @@ const SearchBar = () => {
   }, [searchTerm, setFilterSearchTerm]);
 
   return (
-    <div className="searchbar-wrapper">
-      <input
-        type="text"
-        placeholder="Search product..."
-        value={searchTerm}
-        onChange={(e) => setSearchTerm(e.target.value)}
-        minLength={3}
-      />
-    </div>
+    <input
+      type="text"
+      placeholder="Search product..."
+      value={searchTerm}
+      onChange={(e) => setSearchTerm(e.target.value)}
+      minLength={3}
+    />
   );
 };
 export default SearchBar;

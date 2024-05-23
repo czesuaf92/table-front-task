@@ -41,3 +41,9 @@
   margin: 20px 0;
   gap: 20px;
 }
+
+.container {
+  max-width: 1280px;
+  padding: 32px 16px;
+  margin: 0 auto;
+}

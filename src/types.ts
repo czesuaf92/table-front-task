@@ -17,3 +17,8 @@ export interface CategoryType {
 }
 
 export type SortOptionType = '-' | 'asc' | 'desc';
+
+export interface SelectOptionType {
+  label: string;
+  value: string;
+}
