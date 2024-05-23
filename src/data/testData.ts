@@ -1,20 +1,4 @@
-interface ProductType {
-    index: string;
-    name: string;
-    quantity: number;
-    price: number;
-}
-interface SubCategoryType {
-    subCatId: string;
-    name: string;
-    products: ProductType[];
-
-}
-interface DataItemType {
-    catId: number;
-    name: string;
-    subcategories: SubCategoryType[];
-}
+import { CategoryType } from "../types";
 
 const range = (from: number, to: number) => {
     const nums = [];
@@ -28,7 +12,7 @@ const randomFromRange = (min: number, max: number) => {
     return Math.floor(Math.random() * (max - min) + min);
 };
 
-export const testData: DataItemType[] = range(0, 10).map(catId => ({
+export const testData: CategoryType[] = range(0, 10).map(catId => ({
     catId,
     name: `category${catId}`,
     subcategories: range(0, randomFromRange(3, 6)).map(subCatId => ({
