@@ -1,13 +1,13 @@
-import { useState } from "react";
-import { testData } from "../data/testData";
-import { CategoryType } from "../types";
+import { useProducts } from "../contexts/ProductsContext";
 import Category from "./Category";
+import SearchBar from "./SearchBar";
 
 const ProductsTable: React.FC = () => {
-  const [products, setProducts] = useState<CategoryType[]>(testData);
+  const { products } = useProducts();
 
   return (
     <div>
+      <SearchBar />
       <div className="products-table">
         {
           products.map(category => (

@@ -1,10 +1,13 @@
 import ProductsTable from "./components/ProductsTable";
+import { ProductsProvider } from "./contexts/ProductsContext";
 
 const App = () => {
   return (
-    <div >
-      <ProductsTable />
-    </div>
+    <ProductsProvider>
+      <div >
+        <ProductsTable />
+      </div>
+    </ProductsProvider>
   );
 };
 
