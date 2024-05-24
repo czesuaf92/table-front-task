@@ -26,7 +26,7 @@ const SearchBar = () => {
   return (
     <input
       type="text"
-      placeholder="Search product..."
+      placeholder="Search product by name..."
       value={searchTerm}
       onChange={(e) => setSearchTerm(e.target.value)}
       minLength={3}

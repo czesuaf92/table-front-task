@@ -22,7 +22,7 @@ const ProductsTable: React.FC = () => {
     products[index].subcategories.forEach(subcategory => {
       totalHeight += 60;
 
-      subcategory.products.forEach(product => {
+      subcategory.products.forEach(() => {
         totalHeight += 40;
       });
     });
